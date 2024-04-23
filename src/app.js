@@ -48,7 +48,11 @@ app.use(
 
 //cors
 app.use(cors());
-
+app.use("/test", (req, res) => {
+  res.status(200).json({
+    message: "the project is working well",
+  });
+});
 //api v1 routes
 app.use("/api/v1", routes);
 
